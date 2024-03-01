@@ -3,6 +3,7 @@ const colors = require('colors')
 const dotenv = require('dotenv')
 const { connectDB } = require('./config/db')
 const authRoute = require('./routes/authRoute')
+const categoryRoute = require('./routes/categoryRoute')
 
 // Configure env
 dotenv.config()
@@ -26,6 +27,8 @@ app.get('/', (req,res) => {
 
 // Routes
 app.use('/api/v1/auth',authRoute)
+
+app.use('/api/v1/category', categoryRoute)
 /*--------------------API Calls //----------------*/
 
 app.listen(PORT, () => console.log(`Server running on port${PORT}`.bgBlack.white))
