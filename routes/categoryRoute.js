@@ -1,4 +1,5 @@
 const express = require('express')
+const { createCategoryController } = require('../controllers/categoryController')
 
 const router = express.Router()
 
